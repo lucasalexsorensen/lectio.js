@@ -1,3 +1,6 @@
+# secrets containing credentials
+secrets.js
+
 # Logs
 logs
 *.log

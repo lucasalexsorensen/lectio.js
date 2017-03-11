@@ -1,0 +1,24 @@
+{
+  "name": "lectio.js",
+  "version": "0.0.1",
+  "description": "lectio.dk scraper based on nightmarejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasalexsorensen/lectio.js.git"
+  },
+  "author": "Lucas Sorensen <lucas.alex.sorensen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucasalexsorensen/lectio.js/issues"
+  },
+  "homepage": "https://github.com/lucasalexsorensen/lectio.js#readme",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "jsdom": "^9.11.0",
+    "nightmare": "^2.10.0"
+  }
+}
