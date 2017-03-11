@@ -4,5 +4,4 @@ var schedule = require("./schedule");
 module.exports = {
 	auth: auth,
 	schedule: schedule
-
 }
