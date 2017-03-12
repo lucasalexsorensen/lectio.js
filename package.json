@@ -20,5 +20,9 @@
     "axios": "^0.15.3",
     "jsdom": "^9.11.0",
     "nightmare": "^2.10.0"
+  },
+  "devDependencies": {
+    "cors": "^2.8.1",
+    "express": "^4.15.2"
   }
 }

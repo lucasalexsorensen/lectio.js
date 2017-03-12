@@ -2,7 +2,7 @@ var axios = require("axios");
 var jsdom = require("jsdom");
 
 module.exports = (token, studentId, schoolId, cb) => {
-	var url = `https:\/\/www.lectio.dk/lectio/${schoolId}/SkemaNy.aspx?type=elev&elevid=${studentId}`;
+	var url = `https:\/\/www.lectio.dk/lectio/${schoolId}/SkemaNy.aspx?type=elev&elevid=${studentId}&week=092017`;
 
 	axios.get(url, {
 		headers: {
@@ -87,7 +87,7 @@ module.exports = (token, studentId, schoolId, cb) => {
 			});
 
 			// Return with schedule object
-			cb(objSchedule)
+			cb(objSchedule);
 		});
 	})
 	.catch((error) => {
