@@ -1,5 +1,4 @@
 var scraper = require("./index");
-var secrets = require("./secrets");
 var express = require("express");
 var cors = require("cors");
 
