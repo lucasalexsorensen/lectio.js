@@ -1,7 +1,11 @@
 var auth = require("./auth");
+var verify = require("./verify");
 var schedule = require("./schedule");
+var assignments = require("./assignments");
 
 module.exports = {
 	auth: auth,
-	schedule: schedule
+	verify: verify,
+	schedule: schedule,
+	assignments: assignments
 }

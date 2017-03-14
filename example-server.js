@@ -7,7 +7,6 @@ var app = express();
 app.use(cors());
 
 app.get('/login', (req, res) => {
-	console.log('authenticating...');
 	scraper.auth(req.query.username, req.query.password, req.query.schoolId, (token, studentId) => {
 		console.log('response..');
 		res.json({
@@ -18,9 +17,25 @@ app.get('/login', (req, res) => {
 	});
 });
 
+app.get('/verify', (req, res) => {
+	scraper.verify(req.query.token, req.query.schoolId, (isAuthenticated) => {
+		res.json({
+			authenticated: true,
+			schoolId: req.query.schoolId
+		});
+	});
+});
+
+
 app.get('/schedule', (req, res) => {
 	scraper.schedule(req.query.token, req.query.studentId, req.query.schoolId, (schedule) => {
-		res.json({'schedule': schedule})
+		res.json({'schedule': schedule});
+	});
+});
+
+app.get('/assignments', (req, res) => {
+	scraper.assignments(req.query.token, req.query.studentId, req.query.schoolId, (assignments) => {
+		res.json({'assignments': assignments});
 	});
 });
 
